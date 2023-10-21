@@ -5,8 +5,8 @@ LIBS=
 
 all: hello
 
-hello: main.c
-	$(CC) $(CFLAGS) -o$@ $< $(LIBS)
+hello: main.c strutils.c
+	$(CC) $(CFLAGS) -o$@ $^ $(LIBS)
 
 clean:
 	rm -f hello
